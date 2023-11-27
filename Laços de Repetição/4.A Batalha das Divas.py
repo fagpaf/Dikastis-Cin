@@ -11,16 +11,12 @@ for i in range(1, n+1, 1):
   print(f'Vai começar a {i}º rodada!')
   # Notas:
   nota_coreografia_taylor = int(input())
-  nota_final_tay = 4*nota_coreografia_taylor
- 
   nota_figurino_taylor = int(input())
-  nota_final_tay = 3*nota_figurino_taylor
+  nota_final_tay =  (4*nota_coreografia_taylor) + (3*nota_figurino_taylor)
   
   nota_coreografia_beyonce = int(input())
-  nota_final_bey = 4*nota_coreografia_beyonce
-
   nota_figurino_beyonce = int(input())
-  nota_final_bey = 3*nota_figurino_beyonce
+  nota_final_bey = (4*nota_coreografia_beyonce) + (3*nota_figurino_beyonce)
 # Rounds:
   diff = int(abs(nota_final_bey - nota_final_tay))
   if nota_final_bey < nota_final_tay:
