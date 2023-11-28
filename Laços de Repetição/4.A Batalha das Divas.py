@@ -39,4 +39,3 @@ if equipe_t < equipe_b:
   print(f'Minha nossa! A equipe da Beyoncé chocou o mundo e venceu a equipe da Taylor Swift por um placar de {equipe_b} a {equipe_t}. A Bey é a verdadeira rainha do pop!')
 else:
   print(f'Uuuh! Por um placar de {equipe_t} a {equipe_b}, a equipe da Taylor Swift venceu a competição e mostrou que ela é a verdadeira diva do pop!')
-  ffw
