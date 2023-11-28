@@ -2,25 +2,35 @@ num_versos = int(input())
 acerto_plateia = 0
 for i in range(1, num_versos + 1):
   input_plateia = input()
-  digito = int(i)
-  if input_plateia == input_plateia.upper():
-    acerto_plateia += 1
+  letra_musica = ''
+  for char in (input_plateia):
+    if (char.islower()):
+      char = char.upper()
+    letra_musica += char
   # 1° verso
-  if digito == 1:
+  if i == 1:
     print("Cause, baby, now we've got")
-    print(f'{input_plateia.upper()}')
+    if letra_musica == 'BAD BLOOD':
+      print(f'{letra_musica}')
+      acerto_plateia += 1
   # 2° verso 
-  elif digito == 2:
+  if i == 2:
     print('You know it used to be')
-    print(f'{input_plateia.upper()}')
+    if letra_musica == 'MAD LOVE':
+      print(f'{letra_musica}')
+      acerto_plateia += 1
   # 3° verso 
-  elif digito == 3:
+  if i == 3:
     print('So take a look what')
-    print(f'{input_plateia.upper()}')
+    if letra_musica == "YOU'VE DONE":
+      print(f'{letra_musica}')
+      acerto_plateia += 1
   # 4° verso 
-  elif digito == 4:
+  if i == 4:
     print("Cause, baby, now we've got")
-    print(f'{input_plateia.upper()}')
+    if letra_musica == 'BAD BLOOD, HEY':
+      print(f'{letra_musica}')
+      acerto_plateia += 1
 if acerto_plateia == num_versos:
     print('A plateia deu um show! Acertou tudo!')
 elif (num_versos * 0.5) <= acerto_plateia:
