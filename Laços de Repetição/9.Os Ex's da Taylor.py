@@ -9,3 +9,4 @@ palavra_taylor = input()
     else:
     print(f'perdeu covarde!')
     .replace()
+    ca
