@@ -4,8 +4,8 @@ nota_final_tay = 0
 nota_final_bey = 0
 equipe_b = 0
 equipe_t = 0
-cantora1 = 'Taylor Swift'
-cantora2 = 'Beyoncé'
+cantora1 = 'Tay'
+cantora2 = 'Bey'
 print(f'Vai começar! Vamos ver quem é a verdadeira diva!')
 for i in range(1, n+1):
   print(f'Vai começar a {i}º rodada!')
