@@ -32,7 +32,3 @@ while (loop):
   elif codigo_vip == Fim_da_análise:
     loop = False
 print(f'O show da Taylor Swift será em {show_name} e contará com {number_VIPs} VIPs!')
-
-
-
-
