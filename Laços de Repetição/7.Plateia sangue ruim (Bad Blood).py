@@ -4,8 +4,7 @@ for i in range(1, num_versos + 1):
   input_plateia = input()
   letra_musica = ''
   for char in (input_plateia):
-    if (char.islower()):
-      char = char.upper()
+    char = char.upper()
     letra_musica += char
   # 1° verso
   if i == 1:
