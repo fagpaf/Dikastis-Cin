@@ -3,7 +3,7 @@ acerto_plateia = 0
 for i in range(1, num_versos + 1):
   input_plateia = input()
   letra_musica = ''
-  for char in (input_plateia):
+  for char in input_plateia:
     char = char.upper()
     letra_musica += char
   # 1° verso
