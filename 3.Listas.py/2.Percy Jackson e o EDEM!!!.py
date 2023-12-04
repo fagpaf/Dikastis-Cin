@@ -1,6 +1,6 @@
 Q = int(input())
 Q_respostas = input()
-Respostas_Percy = Q_respostas.split(',')
+Respostas_Percy = Q_respostas.split(', ')
 # Lista correta 
 gabarito = [
 {'Nome': 'Zeus', 'Especialidade': 'trovão', 'Natureza': 'deus'},
@@ -14,6 +14,7 @@ gabarito = [
 if Q == 0:
   print('Infelizmente, Percy Jackson, chegou atrasado para a exame...')
 else:
-  for n in range(Q):
-        print(f'A resposta da {n}ª questão está... CORRETA!')
-        print(f'A resposta da {n}ª questão está... ERRADA!')
+  for i in range(Q):
+    tupla = ()
+    print(f'A resposta da {n}ª questão está... CORRETA!')
+    print(f'A resposta da {n}ª questão está... ERRADA!')
