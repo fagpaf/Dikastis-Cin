@@ -1,14 +1,36 @@
-#Itens que Procura
-lista_deseja = []
-itens_que_deseja = input()
-lista_deseja = itens_que_deseja.split(', ')
-#Itens Encontrados no Acampamento 
-lista_encontrou = []
-itens_que_encontrou = input()
-lista_encontrou = itens_que_encontrou.split(', ')
+# Itens que Procura
+lista_deseja = input().split(', ')
 
+# Itens Encontrados no Acampamento 
+lista_encontrou = input().split(', ')
+
+# Itens em Comum
+qtd_list_deseja = 0
+n = 0
 lista_agrupamento = []
 for i in lista_deseja:
   if i in lista_encontrou:
     lista_agrupamento.append(i)
-print('sds')
+    n += 1
+  else:
+    qtd_list_deseja += 1
+if n != 0:
+  print('Estes são os itens que já tenho no Acampamento Meio-Sangue:')
+  for idx, objeto in enumerate(lista_agrupamento, 1):
+    print(f'{idx}° item: {objeto}')
+else:
+  print(f'Hmm, preciso visitar um vendedor ambulante! Não encontrei nenhum dos {qtd_list_deseja} itens aqui no Acampamento Meio-Sangue.')
+
+# Itens Para Comprar
+qtd_itens_deseja = len(lista_deseja)
+it_comprar = 0
+lista_compras = []
+for j in lista_deseja:
+  if j not in lista_encontrou:
+    lista_compras.append(j)
+    it_comprar += 1
+if it_comprar != 0:
+  print(f'Vou precisar adquirir {it_comprar} itens antes da batalha!')
+else:
+  print(f'Perfeito, encontrei todos os {qtd_itens_deseja} itens aqui no Acampamento Meio-Sangue!')
+print('Estou pronto para a batalha! Que comece a guerra contra os Titãs!')
