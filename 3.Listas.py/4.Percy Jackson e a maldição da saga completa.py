@@ -5,6 +5,8 @@ lista_verificacao = []
 for i in livros_percy:
   if i in colecao_sergio:
     lista_verificacao.append(i)
+livros_faltando = 
 if lista_verificacao == livros_percy:
   print('Sua coleção está completa! Você pode ler à vontade.')
-elif lista_verificacao 
+elif 0 < lista_verificacao < livros_percy:
+  print(f'Infelizmente, sua coleção está incompleta. Falta(m) esse(s) livro(s): {livros_faltando}.')
