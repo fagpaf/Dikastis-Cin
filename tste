@@ -17,5 +17,16 @@
 # print(newlist)
 # print(fruits)
 
+# thislist = ["apple", "banana", "cherry"]
+# [print(x) for x in thislist]
+# cars = ['Ford', 'BMW', 'Volvo']
+
+# cars.sort()
+# print(cars)
 thislist = ["apple", "banana", "cherry"]
-[print(x) for x in thislist]
+idx = []
+i = 0
+while i < len(thislist):
+  idx.append(i)
+  i = i + 1
+print(idx)
