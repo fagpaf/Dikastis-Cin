@@ -23,10 +23,10 @@
 
 # cars.sort()
 # print(cars)
-thislist = ["apple", "banana", "cherry"]
-idx = []
-i = 0
-while i < len(thislist):
-  idx.append(i)
-  i = i + 1
-print(idx)
+# thislist = ["apple", "banana", "cherry"]
+# idx = []
+# i = 0
+# while i < len(thislist):
+#   idx.append(i)
+#   i = i + 1
+# print(idx)
