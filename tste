@@ -1,0 +1,21 @@
+# list1 = ["a", "b" , "c", 'p']
+# list2 = [1, 2, 3]
+
+# list1.extend(list2)
+# print(list1)
+
+# list1 = ["a", "b", "c"]
+# list2 = [1, 2, 3]
+
+# list3 = list1 + list2
+# print(list3)
+
+# fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+
+# newlist = [x for x in fruits if "a" in x]
+
+# print(newlist)
+# print(fruits)
+
+thislist = ["apple", "banana", "cherry"]
+[print(x) for x in thislist]
