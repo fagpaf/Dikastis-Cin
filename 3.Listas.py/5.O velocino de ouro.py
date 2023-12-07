@@ -2,3 +2,7 @@ informacoes_deuses = [['Zeus', 'Poseidon', 'Atenas', 'Ares', 'Afrodite'], [100, 
 sequencia = input()
 for n in sequencia:
   print(f'Deus:{informacoes_deuses[0][int(n)]}')
+  print(f'Poder:{informacoes_deuses[1][int(n)]}')
+  print(f'Artefato:{informacoes_deuses[2][int(n)]}')
+  if
+    print()
