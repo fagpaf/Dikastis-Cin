@@ -3,18 +3,23 @@ sequencia = input()
 lista_algarismos = []
 for i in sequencia:
   lista_algarismos.append(int(i))
-for n in lista_algarismos:
+p = lista_algarismos[-1]
+for idx, n in enumerate(lista_algarismos):
   if (0 <= n < 2) or (n == 3):
-    print(f'Deus:{informacoes_deuses[0][int(n)]}')
-    print(f'Poder:{informacoes_deuses[1][int(n)]}')
-    print(f'Artefato:{informacoes_deuses[2][int(n)]}')
-    print()
-  elif (n == 2):
-    print(f'Deusa:{informacoes_deuses[0][int(n)]}')
-    print(f'Poder:{informacoes_deuses[1][int(n)]}')
-    print(f'Artefato:{informacoes_deuses[2][int(n)]}')
-    print()
-  elif (n == 4):
-    print(f'Deusa:{informacoes_deuses[0][int(n)]}')
-    print(f'Poder:{informacoes_deuses[1][int(n)]}')
-    print(f'Artefato:{informacoes_deuses[2][int(n)]}')
+    print(f'Deus:{informacoes_deuses[0][n]}')
+    print(f'Poder:{informacoes_deuses[1][n]}')
+    print(f'Artefato:{informacoes_deuses[2][n]}')
+    if idx != len(lista_algarismos) - 1:
+      print()
+  elif n == 2:
+    print(f'Deusa:{informacoes_deuses[0][n]}')
+    print(f'Poder:{informacoes_deuses[1][n]}')
+    print(f'Artefato:{informacoes_deuses[2][n]}')
+    if idx != len(lista_algarismos) - 1:
+      print()
+  elif n == 4:
+    print(f'Deusa:{informacoes_deuses[0][n]}')
+    print(f'Poder:{informacoes_deuses[1][n]}')
+    print(f'Artefato:{informacoes_deuses[2][n]}')
+    if idx != len(lista_algarismos) - 1:
+      print()
