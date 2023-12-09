@@ -30,3 +30,19 @@
 #   idx.append(i)
 #   i = i + 1
 # print(idx)
+
+# matriz = []
+# qtd_reliquias = 0
+# sequencia = input()
+# while sequencia != 'Fim do labirinto':
+#     linha_matriz = []
+#     for i in sequencia.split():
+#       algarismo = int(i)
+#       linha_matriz.append(algarismo)
+#       if algarismo == 1:
+#         qtd_reliquias += 1
+#     matriz.append(linha_matriz)
+#     sequencia = input()
+cars = [0, 0, 0, 1]
+cars.sort(reverse=-1)
+print(cars)
