@@ -3,7 +3,7 @@ sequencia = input()
 lista_algarismos = []
 for i in sequencia:
   lista_algarismos.append(int(i))
-p = lista_algarismos[-1]
+# Outputs, iterando o idx do último item da lista
 for idx, n in enumerate(lista_algarismos):
   if (0 <= n < 2) or (n == 3):
     print(f'Deus:{informacoes_deuses[0][n]}')
