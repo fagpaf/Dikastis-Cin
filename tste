@@ -43,6 +43,31 @@
 #         qtd_reliquias += 1
 #     matriz.append(linha_matriz)
 #     sequencia = input()
-cars = [0, 0, 0, 1]
-cars.sort(reverse=-1)
-print(cars)
+# cars = [0, 0, 0, 1]
+# cars.sort(reverse=-1)
+# print(cars)
+# coluna = int(input())
+# linha = int(input())
+# matriz = []
+# for i in range(coluna):
+#   andar = [int(input()) for i in range(linha)]
+#   matriz.append(andar)
+# for j in range(coluna):
+#   for k in range(linha):
+#     print(matriz[j][k], end=" ")
+#   print()
+# print()
+# numero_chale = 0
+# quantidade_campistas = 0
+
+fruits = [['apple', 'banana', 'cherry'], [0, 1, 4]]
+
+# Procurar pela lista que contém o elemento 0 e removê-la
+for sublist in fruits:
+    if 0 in sublist:
+        fruits.remove(sublist)
+        break  # Parar após encontrar a primeira ocorrência
+
+print(fruits)
+
+

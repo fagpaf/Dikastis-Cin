@@ -9,4 +9,8 @@ while semideus != 'Parar':
   lista_arma_indesejada.append(lista_input)
   semideus = input()
 # 
+
 lista_copia = arsenal[:]
+for v in range(len(lista_arma_indesejada)):
+  if v == 1:
+    print(f' irá batalhar na base do murro!')
