@@ -10,3 +10,7 @@ while semideus != 'Parar':
   semideus = input()
 # 
 lista_copia = arsenal[:]
+lista = []
+for i, arma in enumerate(lista_arma_indesejada):
+    for meio_sangue in arma:
+      lista.append(meio_sangue)
