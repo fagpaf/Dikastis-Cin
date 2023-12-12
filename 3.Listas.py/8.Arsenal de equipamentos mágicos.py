@@ -9,4 +9,7 @@ while semideus != 'Parar':
   lista_arma_indesejada.append(lista_input)
   semideus = input()
 # 
-
+lista_copia = arsenal[:]
+for k in lista_arma_indesejada:
+  if k in lista_copia:
+    lista_copia.remove(k)
