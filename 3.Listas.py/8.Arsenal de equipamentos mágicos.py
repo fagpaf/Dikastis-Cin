@@ -1,4 +1,10 @@
-arsenal = ['Foice de Hades', 'Talismã de Ícaro', 'Elmo da Invisibilidade', 'Cinto de Hermes', 'Espada Anaklusmos', 'Escudo Aegis',  'Adaga Katoptris']
+arsenal = ['Foice de Hades',
+'Talismã de Ícaro',
+'Elmo da Invisibilidade',
+'Cinto de Hermes',
+'Espada Anaklusmos',
+'Escudo Aegis',
+'Adaga Katoptris']
 lista_arma_indesejada = []
 semideus = input()
 # Criando a Matriz das Armas a Serem Removidas
