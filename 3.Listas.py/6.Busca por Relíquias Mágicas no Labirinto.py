@@ -14,8 +14,9 @@ while sequencia != 'Fim do labirinto':
 # Condicionais Para o Print
 if qtd_reliquias != 0:
   print('Relíquias encontradas nos seguintes locais:')
-  for v_linha, linha in enumerate(matriz):
-    for v_coluna, valor in enumerate (linha):
+  for v_linha in range(len(matriz)):
+    for v_coluna in range(len(matriz[v_linha])):
+      valor = matriz[v_linha][v_coluna]
       if valor == 1:
         print(f'linha: {v_linha}, coluna: {v_coluna}')
 else:
