@@ -9,5 +9,5 @@ while loop:
   else:
     loop = False
 print(f'O grupo formado por {len(grupo_de_herois)} heróis para a missão {nome_missao} foi:')
-for i, heroi in enumerate(grupo_de_herois, 1):
+for heroi in (grupo_de_herois):
   print(f'- {heroi}')

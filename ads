@@ -8,17 +8,17 @@ lista_encontrou = input().split(', ')
 qtd_list_deseja = 0
 n = 0
 lista_agrupamento = []
-idx = 1
 for i in lista_deseja:
   if i in lista_encontrou:
     lista_agrupamento.append(i)
     n += 1
   else:
     qtd_list_deseja += 1
+idx = 1
 if n != 0:
   print('Estes são os itens que já tenho no Acampamento Meio-Sangue:')
-  for objeto in lista_agrupamento:
-    print(f'{idx}º item: {objeto}')
+for objeto in lista_agrupamento:
+    print(f'{idx}º {objeto}')
     idx += 1
 else:
   print(f'Hmm, preciso visitar um vendedor ambulante! Não encontrei nenhum dos {qtd_list_deseja} itens aqui no Acampamento Meio-Sangue.')

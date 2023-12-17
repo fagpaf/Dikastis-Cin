@@ -60,42 +60,49 @@
 # numero_chale = 0
 # quantidade_campistas = 0
 
-fruits = [['apple', 'banana', 'cherry'], [0, 1, 4]]
+# fruits = [['apple', 'banana', 'cherry'], [0, 1, 4]]
 
-# Procurar pela lista que contém o elemento 0 e removê-la
-for sublist in fruits:
-    if 0 in sublist:
-        fruits.remove(sublist)
-        break  # Parar após encontrar a primeira ocorrência
+# # Procurar pela lista que contém o elemento 0 e removê-la
+# for sublist in fruits:
+#     if 0 in sublist:
+#         fruits.remove(sublist)
+#         break  # Parar após encontrar a primeira ocorrência
 
-print(fruits)
+# print(fruits)
 
 
-instrumentos = ["Foice de Hades", 
-"Talismã de Ícaro", 
-"Elmo da Invisibilidade", 
-"Cinto de Hermes", 
-"Espada Anaklusmos", 
-"Escudo Aegis", 
-"Adaga Katoptris"]
-entrada = input().split("-")
+# instrumentos = ["Foice de Hades", 
+# "Talismã de Ícaro", 
+# "Elmo da Invisibilidade", 
+# "Cinto de Hermes", 
+# "Espada Anaklusmos", 
+# "Escudo Aegis", 
+# "Adaga Katoptris"]
+# entrada = input().split("-")
 
-while entrada[0] != "Parar":
-  nome = entrada[0]
-  instrumentos_indesejados = entrada[1:]
-  instrumentos_escolhidos = instrumentos.copy()
+# while entrada[0] != "Parar":
+#   nome = entrada[0]
+#   instrumentos_indesejados = entrada[1:]
+#   instrumentos_escolhidos = instrumentos.copy()
   
-  for instrumento in instrumentos_indesejados:
-    instrumentos_escolhidos.remove(instrumento)
+#   for instrumento in instrumentos_indesejados:
+#     instrumentos_escolhidos.remove(instrumento)
   
-  if len(instrumentos_escolhidos) == 0:
-    print(f"{nome} irá batalhar na base do murro!")
-  elif len(instrumentos_escolhidos) == 1:
-    print(f"{nome} irá rumo a batalha com o equipamento: {instrumentos_escolhidos[0]}!")
-  else:
-    last = instrumentos_escolhidos[-1]
-    instrumentos_escolhidos.pop()
-    answ = ', '.join(n for n in instrumentos_escolhidos)
-    print(f"{nome} irá rumo a batalha com os seguintes equipamentos: {answ} e {last}!")
+#   if len(instrumentos_escolhidos) == 0:
+#     print(f"{nome} irá batalhar na base do murro!")
+#   elif len(instrumentos_escolhidos) == 1:
+#     print(f"{nome} irá rumo a batalha com o equipamento: {instrumentos_escolhidos[0]}!")
+#   else:
+#     last = instrumentos_escolhidos[-1]
+#     instrumentos_escolhidos.pop()
+#     answ = ', '.join(n for n in instrumentos_escolhidos)
+#     print(f"{nome} irá rumo a batalha com os seguintes equipamentos: {answ} e {last}!")
   
-  entrada = input().split("-")
+#   entrada = input().split("-")
+# minha_lista = ["item1", "item2", "item3"]
+
+# # Imprime os itens unificados
+# print("".join(minha_lista))
+lista_agrupamento = input().split(', ')
+for idx in range(len(lista_agrupamento), 1):
+    print(f'{idx}º ')
