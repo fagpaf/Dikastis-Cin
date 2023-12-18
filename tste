@@ -103,6 +103,13 @@
 
 # # Imprime os itens unificados
 # print("".join(minha_lista))
-lista_agrupamento = input().split(', ')
-for idx in range(len(lista_agrupamento), 1):
-    print(f'{idx}º ')
+# lista_agrupamento = input().split(', ')
+# for idx in range(len(lista_agrupamento), 1):
+#     print(f'{idx}º ')
+def my_function(food):
+  for x in food:
+    print(x)
+
+ads = ["apple", "banana", "cherry"]
+
+my_function(ads)
