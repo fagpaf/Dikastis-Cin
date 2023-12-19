@@ -103,6 +103,12 @@
 
 # # Imprime os itens unificados
 # print("".join(minha_lista))
-lista_agrupamento = input().split(', ')
-for idx in range(len(lista_agrupamento), 1):
-    print(f'{idx}º ')
+# lista_agrupamento = input().split(', ')
+# for idx in range(len(lista_agrupamento), 1):
+#     print(f'{idx}º ')
+lista = [0, 0, 0, 0]
+i = 0
+while (i < len(lista)):
+    lista[i] = i * 2
+    print(lista[i])
+    i += 1
