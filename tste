@@ -106,9 +106,19 @@
 # lista_agrupamento = input().split(', ')
 # for idx in range(len(lista_agrupamento), 1):
 #     print(f'{idx}º ')
+<<<<<<< HEAD
 lista = [0, 0, 0, 0]
 i = 0
 while (i < len(lista)):
     lista[i] = i * 2
     print(lista[i])
     i += 1
+=======
+def my_function(food):
+  for x in food:
+    print(x)
+
+ads = ["apple", "banana", "cherry"]
+
+my_function(ads)
+>>>>>>> 34e5e20a84a76a0fad2f7a48e72c84b05e872145
