@@ -6,7 +6,9 @@ def senha_de_acesso(meu_codigo):
       x = senha_de_acesso(meu_codigo - 1)
     else:
       x = meu_codigo * senha_de_acesso(meu_codigo - 2)
-      return x
+  return x
+
+
 num = int(input())
 # Output
 print(senha_de_acesso(num))
