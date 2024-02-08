@@ -6,29 +6,27 @@ def conferir_bits(bit):
     bit.insert(0, '0')
     return conferir_bits(bit)
 
-def fatiamento(firewall, byte, chances):
+def tentativa(chances):
   if chances > 0:
-    
-    def():
-        if byte == firewall[:7]:
+    def verificação_de_chave(firewall, byte, chances):
+      nonlocal chances
+      if byte == firewall[:8]:
         return "Muito bem! Estamos dentro! Vamos queimar essa cidade!!"
-        else:
+      else:
         if len(firewall) > 7:  
-            firewall = firewall[1:]
-            return fatiamento(firewall, byte, chances)
+          firewall = firewall[1:]
+          return verificação_de_chave(firewall, byte, chances)
         else:
-
-
-        print("Não é essa a senha, estamos ficando sem tempo.")
-        chances -= 1
-        
+          chances -= 1
+          return "Não é essa a senha, estamos ficando sem tempo." 
   else:
     return "Corre Keanu! Eles nos descobriram!!"
 
 palavra = input()
 limite_tentativas = int(input())
 senha = input()
-acesso = fatiamento(conferir_bits(palavra), senha, limite_tentativas)
+parede_de_fogo = conferir_bits(palavra)
+funcao_principal = tentativa(limite_tentativas)
+acesso = funcao_principal(parede_de_fogo, senha, limite_tentativas)
 print(acesso)
 
-def verificação_de_chave():
