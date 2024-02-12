@@ -1,6 +1,6 @@
 def conferir_bits(bit):
   bit = list(bit)
-  if len(bit) == 32:
+  if len(bit) == 10:
     return ''.join(bit)
   else:
     bit.insert(0, '0')
@@ -11,29 +11,25 @@ def fatiamento(firewall, byte, chances):
   if len(firewall) > 7:
     firewall = firewall[1:]
     return verificacao_de_chave(firewall, byte, chances)
-#   Output's senhas erradas
   else:
-    if chances > 1: 
+    if chances > 0: 
+      parede_copia = parede_de_fogo[:]
       return "Não é essa a senha, estamos ficando sem tempo."
     else:
-      print("Não é essa a senha, estamos ficando sem tempo.")
       return "Corre Keanu! Eles nos descobriram!!"
 
 
 def verificacao_de_chave(parede_copia, byte, chances):
   if byte == parede_copia[:8]:
-    # Fazendo uso de variável global para interrompero loop
     global senha_correta
     senha_correta = True
     return "Muito bem! Estamos dentro! Vamos queimar essa cidade!!"
   else:
     return fatiamento(parede_copia, byte, chances)
-  
 
 palavra = input()
 limite_tentativas = int(input())
 senha_correta = False
-# Loop para renovar a senha e garantir o lim de tentativas
 while limite_tentativas > 0 and not senha_correta:
   senha = input()
   parede_de_fogo = conferir_bits(palavra)
