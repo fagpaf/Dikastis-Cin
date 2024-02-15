@@ -19,10 +19,3 @@ while not encerrar:
     encerrar = True
   else:
     lista.append(escola)
-def escolas_do_rj(nome):
-  lista = []
-  if nome != "Fim":
-    lista.append(nome)
-    return escolas_do_rj(nome)
-  else:
-    return None
