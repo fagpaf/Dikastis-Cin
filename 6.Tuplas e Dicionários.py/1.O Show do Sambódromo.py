@@ -1,4 +1,4 @@
-Escolas_de_Samba = {"Porto da Pedra",
+Escolas_de_Samba = ("Porto da Pedra",
 "Beija-flor",
 "Salgueiro",
 "Grande Rio",
@@ -9,9 +9,9 @@ Escolas_de_Samba = {"Porto da Pedra",
 "Vila Isabel",
 "Mangueira",
 "Paraíso do Tuiuti",
-"Viradouro"}
+"Viradouro")
 
-lista_escolas = []
+lista_escolas = {}
 encerrar = False
 while not encerrar:
   escola = input()
@@ -19,3 +19,10 @@ while not encerrar:
     encerrar = True
   else:
     lista.append(escola)
+def escolas_do_rj(nome):
+  lista = []
+  if nome != "Fim":
+    lista.append(nome)
+    return escolas_do_rj(nome)
+  else:
+    return None
