@@ -9,8 +9,7 @@ def conferir_bits(bit):
 
 def fatiamento(firewall, byte, chances):
   if len(firewall) > 7:
-    firewall = firewall[1:]
-    return verificacao_de_chave(firewall, byte, chances)
+    return verificacao_de_chave(firewall[1:], byte, chances)
 #   Output's senhas erradas
   else:
     if chances > 1: 
@@ -22,9 +21,6 @@ def fatiamento(firewall, byte, chances):
 
 def verificacao_de_chave(parede_copia, byte, chances):
   if byte == parede_copia[:8]:
-    # Fazendo uso de variável global para interrompero loop
-    global senha_correta
-    senha_correta = True
     return "Muito bem! Estamos dentro! Vamos queimar essa cidade!!"
   else:
     return fatiamento(parede_copia, byte, chances)
@@ -37,7 +33,9 @@ senha_correta = False
 while limite_tentativas > 0 and not senha_correta:
   senha = input()
   parede_de_fogo = conferir_bits(palavra)
-  parede_copia = parede_de_fogo[:]
   acesso = verificacao_de_chave(parede_de_fogo, senha, limite_tentativas)
   print(acesso)
   limite_tentativas -= 1
+  # Uma ideia diferente para não usar variavel global, na quebra do loop
+  if "Muito bem!" in acesso:
+    senha_correta = True
