@@ -1,4 +1,4 @@
-Escolas_de_Samba = ("Porto da Pedra",
+Escolas_de_Samba = {"Porto da Pedra",
 "Beija-flor",
 "Salgueiro",
 "Grande Rio",
@@ -9,7 +9,7 @@ Escolas_de_Samba = ("Porto da Pedra",
 "Vila Isabel",
 "Mangueira",
 "Paraíso do Tuiuti",
-"Viradouro")
+"Viradouro"}
 
 lista_escolas = []
 encerrar = False
