@@ -13,6 +13,7 @@ while not encerrar:
     if chave in dict_escolas:
       print(f"{chave} teve sua nota atualizada!")
     dict_escolas[chave] = float(valor)
+    # Verifica se a chave pertence a tupla inical
     if chave not in escolas_de_samba:
       print("Epa, o que essa escola está fazendo aqui?!")
     else:
@@ -22,24 +23,20 @@ while not encerrar:
         lista_primeira_aparicao.append(chave)
     if chave not in escolas_de_samba:
       del dict_escolas[chave]
-
+print("")
+print("CLASSIFICAÇÃO DO CARNAVAL 2024:")
+#Função Sorted para criar uma lista organizando o dicionário em ordem decrescente de notas.
 sorted_escolas = sorted(dict_escolas, key = dict_escolas.get, reverse = True)
 idx = 1
-for key, value in sorted_escolas:
+#For para iterar sobre cada chave do dicionário.
+for key in sorted_escolas:
+  #Value = dict_escolas[key] recebe o valor da chave percorrida no for, assim printando a chave e o valor correto
+  value = dict_escolas[key]
   print(f"{idx}. {key}: {value}")
   idx += 1
-x = 1
-for key, value in sorted_escolas:
-  if x == 1:
-    print(f"É CAMPEÃ! A ESCOLA {key} É A GRANDE VENCEDORA DO CARNAVAL DE 2024, FAZENDO {value} PONTOS!!")
-  if x == 12:
-    print(f"Infelizmente, a escola {key} não alcançou as expectativas, fazendo apenas {value} pontos, e foi rebaixada.")
-  x +=1
-
-
-
-
-
-
-
-sorted(dict_escolas, key = dict_escolas.get, reverse = True)
+print("")
+#Criando duas variáveis para o código ficar mais legível no print
+primeira_colocada = sorted_escolas[0]
+ultima_colocada = sorted_escolas[-1]
+print(f"É CAMPEÃ! A ESCOLA {primeira_colocada} É A GRANDE VENCEDORA DO CARNAVAL DE 2024, FAZENDO {dict_escolas[primeira_colocada]} PONTOS!!")
+print(f"Infelizmente, a escola {ultima_colocada} não alcançou as expectativas, fazendo apenas {dict_escolas[ultima_colocada]} pontos, e foi rebaixada.")
