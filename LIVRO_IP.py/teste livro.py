@@ -29,9 +29,10 @@ while not continuar:
     if len(lista_do_dicionario) == len(lista_total):
       # O Valor é a Lista 
       dict_notas[quesito] = lista_do_dicionario
-
+#Output's
+print("Desfile de samba do Rio de janeiro 2024")
 for chave in dict_notas:
-  print(f"{chave}:")
+  print(f"Vamos às notas para o quesito {chave}:")
   #pesquisar como isso funciona
   for i in range(len(dict_notas[chave])):
     escola, nota = dict_notas[chave][i]
@@ -42,5 +43,6 @@ for chave in dict_notas:
     else:
       print(f"{escola}: {nota}")
 
-
+def calculo_das_medias():
+len(dict_notas)
 print(f"E o vencedor do desfile de escola de samba do Rio de Janeiro de 2024 é:\n{nome_vencedor} com uma nota final de {nota_vencedor}!")
