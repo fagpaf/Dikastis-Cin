@@ -1,6 +1,3 @@
-# Sinceramente não sei oque poderia fazer para deixar mais curto esse código, minha ideia foi utilizar dicionário com listas.
-# Me dá um alô no discord depois Monitor
-# Montando Lista de Lista para facilitar o uso dos input's
 lista_total = []
 loop = False
 while not loop:
@@ -30,20 +27,11 @@ while not continuar:
     if len(lista_do_dicionario) == len(lista_total):
       # O Valor é a Lista 
       dict_avaliacoes[quesito] = lista_do_dicionario
-#Output's
-print("Desfile de samba do Rio de janeiro 2024")
-for chave in dict_avaliacoes:
-  print(f"Vamos às notas para o quesito {chave}:")
-  # Iterando sobre o tamanho da lista para acessar o valor do dicionário  
-  for i in range(len(dict_avaliacoes[chave])):
-    escola, nota = dict_avaliacoes[chave][i] # Desempacotamento do dicionário
-    # Gambiarra para satisfazer o output
-    if nota == 10: 
-      nota = int(nota)
-      print(f"{escola}: {nota}")
-    else:
-      print(f"{escola}: {nota}")
-
+#-------------------------------------------------------
+# Ignorando a segunda e terceira variáveis em cada lista
+#for escola, _, _ in lista_total:
+#    print(escola)
+#-------------------------------------------------------
 # Criando um dicionário para relacionar a escola a sua respectiva nota no quesito
 dict_notas = {}
 for chave in dict_avaliacoes:
@@ -54,6 +42,7 @@ for chave in dict_avaliacoes:
       dict_notas[escola_rj] = [nota]  # Inicializa como uma lista para poder adicionar
     else:
       dict_notas[escola_rj].append(nota)
+
 # Dicionário para encontrar a maior média e a escola campeã
 dict_media = {}
 for idx in range(len(lista_total)): # Iterando a lista dos input's iniciais para acessar o dicinário de notas e o tempo limite de apresentação
@@ -73,6 +62,7 @@ for idx in range(len(lista_total)): # Iterando a lista dos input's iniciais para
       diferença = (75 - tempo) * 0.1
       media += diferença
   dict_media[escola] = (round(media, 2)) # Deixando o resultado em duas casas decimais
+
 # Usando max para determinar o 1 lugar no dicionário
 nome_vencedor = max(dict_media, key=dict_media.get)
 nota_vencedor = max(dict_media.values())
