@@ -21,14 +21,10 @@ while not continuar:
     continuar = True
   else:
     # Utilizando for para não ter erro na montagem do dicionário e renovar o input da Nota
-for i in range(len(lista_total)):
+    for i in range(len(lista_total)):
       nota = input()
-      chave, valor = nota.split(" - ")
-      valor = float(valor)
-      lista_do_dicionario.append([chave, valor])
-
-
-print(dict_notas)
-
-
+      lista_do_dicionario.append(nota)
+    if len(lista_do_dicionario) == len(lista_total):
+      # O Valor é a Lista 
+      dict_notas[quesito] = lista_do_dicionario
 
