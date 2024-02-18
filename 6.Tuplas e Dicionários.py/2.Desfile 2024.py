@@ -38,7 +38,7 @@ for chave in dict_avaliacoes:
   for i in range(len(dict_avaliacoes[chave])):
     escola, nota = dict_avaliacoes[chave][i] # Desempacotamento do dicionário
     # Gambiarra para satisfazer o output
-    if nota == 10: 
+    if nota == 10:
       nota = int(nota)
       print(f"{escola}: {nota}")
     else:
