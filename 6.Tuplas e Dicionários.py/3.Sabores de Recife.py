@@ -81,16 +81,24 @@ else:
     print(f"{mais_vendido.capitalize()} está fazendo sucesso entre os clientes, ultrapassando até mesmo o lendário Bobó de Camarão.")
 
 
-def verificao_de_estoque(dict_estoque, dict_receitas, ingredientes, comida):
-    result = True
-    print(comida)
-    for ingrediente in ingredientes:
-        print(ingrediente)
-        if dict_estoque[ingrediente] < 1:
-            result = reposicao_do_estoque()
-            return result
-    return result
+def receita(dict_pedidos, dict_precos):
+    lucro = 0
+    lucro = float(lucro)
 
-for comida, ingredientes in dict_receitas.items():
-    x = verificao_de_estoque(dict_estoque, dict_receitas, ingredientes, comida)
-    print(x)
+    total_de_vendas = 0
+    for pedido, quantidade in dict_pedidos.items():
+        preco = dict_precos.get(pedido, 0)
+        total_item = quantidade * preco
+        total_de_vendas += total_item
+        
+    lucro += caixa + total_de_vendas
+    return lucro
+
+num_pedidos = 0
+for qtd_pedidos in dict_pedidos.values():
+    num_pedidos += qtd_pedidos
+
+while num_pedidos > 0:
+    lucro = receita(dict_pedidos, dict_precos)
+    num_pedidos -= 1
+print(lucro)
