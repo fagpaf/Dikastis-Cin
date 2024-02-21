@@ -128,7 +128,7 @@ def receita(dict_pedidos, dict_precos):
         total_item = quantidade * preco
         total_de_vendas += total_item
         
-    lucro += caixa 
+    lucro += caixa + total_de_vendas
     return lucro
 
 
