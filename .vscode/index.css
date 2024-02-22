@@ -14,7 +14,7 @@ a{
     color: white;
     text-decoration: none;
 }
-img{
+header img{
     width: 150px;
     height: 150px;
 
@@ -24,4 +24,8 @@ img{
 }
 h1{
     color: rgba(0, 255, 242, 0.377);
+}
+footer img{
+    weight: 40px;
+    height: 40px;
 }
