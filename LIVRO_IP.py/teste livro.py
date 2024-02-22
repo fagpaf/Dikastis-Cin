@@ -47,12 +47,14 @@ def financas(dict_pedidos, dict_precos, caixa):
     lucro = 0
     lucro = float(lucro)
 
+    # Calcula o total de vendas com base nos preços das receitas e as quantidades pedidas
     total_de_vendas = 0
-    for pedido, quantidade in dict_pedidos.items():
-        preco = dict_precos.get(pedido, 0)
-        total_item = quantidade * preco
+    for pedido_cliente, quantidade in dict_pedidos.items():
+        preco = dict_precos.get(pedido_cliente, 0)
+        total_item = quantidade * preco # Calcula o total dos pedidos
         total_de_vendas += total_item
         
+    # Calcula o lucro somando o total de vendas ao valor inicial do caixa
     lucro += (total_de_vendas + caixa)
     return lucro
 
