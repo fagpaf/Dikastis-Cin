@@ -1,34 +1,27 @@
-def verificao_de_estoque(dict_receitas, dict_estoque, dict_pedidos):
-    result = True
+def verificao_de_estoque(dict_ingredientes, dict_receitas, dict_estoque, dict_pedidos, caixa):
+    result = caixa
     custo_reposicao = 0 
     # Iterando sobre os pedidos e suas quantidades
-    for pedidos, quantidade in dict_pedidos.items():
+    for pedidos in dict_pedidos.keys():
         ingredientes_pedido = dict_receitas[pedidos]
 
         # Verificando o estoque para cada ingrediente do pedido
         for ingrediente in ingredientes_pedido:
-          if dict_estoque[ingrediente] < 1: # Se o estoque do ingrediente for menor que 1, adiciona à tupla de reposição
-             custo_reposicao += reposicao_do_estoque(dict_ingredientes, dict_estoque, caixa)
-# chama a def reposição para adicionar op valor do ingrediente q falta para repor
-             
-    # Se houver ingredientes a serem repostos, retorna a tupla, senão retorna True
-    if len(tupla_reposicao) > 0:
-        result = tupla_reposicao
-        return result
-    else:
-        return result
+          if dict_estoque[ingrediente] < 1: # Se o estoque do ingrediente for menor que 1
+            custo_reposicao += reposicao_do_estoque(dict_ingredientes, dict_receitas, dict_estoque[ingrediente], dict_pedidos, caixa)
+    caixa -= custo_reposicao
+    return result
 
-
-def reposicao_do_estoque(dict_ingredientes, dict_estoque, caixa, tupla_reposicao):
-    result = caixa
+def reposicao_do_estoque(dict_ingredientes, dict_receitas, dict_estoque, dict_pedidos, caixa):
+    
+    result = verificao_de_estoque(dict_ingredientes, dict_receitas, dict_estoque, dict_pedidos, caixa)
     # Calcula o custo total da reposição 
-    for ingrediente_reposicao in tupla_reposicao:
-        custo_reposicao += 4 * dict_ingredientes.get(ingrediente_reposicao, 0)
+    ingrediente_reposicao = dict_estoque
+    caixa -= 4 * dict_ingredientes[ingrediente_reposicao]
     
     # Adiciona 4 unidades a todos os ingredientes que precisam ser repostos
-    for ingrediente_reposicao in dict_estoque.keys():
-      if dict_estoque[ingrediente_reposicao] < 1:
-        dict_estoque[ingrediente_reposicao] += 4
+    dict_estoque[ingrediente_reposicao] += 3
+    
     return result
 
 def preparacao_do_pedido(dict_estoque, dict_pedidos, dict_receitas):
@@ -89,6 +82,10 @@ dict_estoque = {}
 for ingrediente in dict_ingredientes:
     dict_estoque[ingrediente] = 5
 
+# -------------------------------------------------------------------------
+# ler a questão e ver o input do novo pedido é adicionado no 3 e feito no 4  BUCETAAAAAAAA
+# -------------------------------------------------------------------------
+
 # Loop dos inputs e criando o dicionário de pedido para saber qual o mais vendido
 dict_pedidos = {}
 condicional = 0
@@ -141,14 +138,9 @@ for qtd_pedidos in dict_pedidos.values():
     num_pedidos += qtd_pedidos
 
 while num_pedidos > 0:
-    dispensa = verificao_de_estoque(dict_receitas, dict_estoque, dict_pedidos)
-    if dispensa == True:
-        prato = preparacao_do_pedido(dict_estoque, dict_pedidos, dict_receitas)
-        lucro = financas(dict_pedidos, dict_precos, caixa)
-    else:
-        repositorio = reposicao_do_estoque(dict_ingredientes, dict_estoque, caixa, dispensa)
-        prato = preparacao_do_pedido(dict_estoque, dict_pedidos, dict_receitas)
-        lucro = financas(dict_pedidos, dict_precos, caixa)
+    dispensa = verificao_de_estoque(dict_ingredientes, dict_receitas, dict_estoque, dict_pedidos, caixa)  
+    prato = preparacao_do_pedido(dict_estoque, dict_pedidos, dict_receitas)
+    lucro = financas(dict_pedidos, dict_precos, caixa)
 
     num_pedidos -= 1
 
