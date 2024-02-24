@@ -19,7 +19,7 @@ def reposicao_do_estoque(dict_ingredientes, dict_receitas, dict_estoque, dict_pe
     ingrediente_reposicao = dict_estoque
     caixa -= 4 * dict_ingredientes[ingrediente_reposicao]
     
-    # Adiciona 4 unidades a todos os ingredientes que precisam ser repostos
+    # Adiciona 3 unidades a todos os ingredientes que precisam ser repostos
     dict_estoque[ingrediente_reposicao] += 3
     
     return result
@@ -82,10 +82,6 @@ dict_estoque = {}
 for ingrediente in dict_ingredientes:
     dict_estoque[ingrediente] = 5
 
-# -------------------------------------------------------------------------
-# ler a questão e ver o input do novo pedido é adicionado no 3 e feito no 4  BUCETAAAAAAAA
-# -------------------------------------------------------------------------
-
 # Loop dos inputs e criando o dicionário de pedido para saber qual o mais vendido
 dict_pedidos = {}
 condicional = 0
@@ -105,7 +101,7 @@ while not loop:
                 dict_receitas[pedido] = tupla_ingredientes
                 # Criando o dict_pedidos
                 if pedido not in dict_pedidos:
-                    dict_pedidos[pedido] = 1
+                    dict_pedidos[pedido] = 0 #recebe 0 pq ele foi adicionadoao cardápio neste momento
                 else:
                     dict_pedidos[pedido] += 1
             else:
@@ -128,19 +124,18 @@ for chave, valor in dict_receitas.items():
     # Percorrendo a tupla para calcular o valor de cada ingrediente
     for ingrediente in valor:
         custo_total += dict_ingredientes.get(ingrediente, 0) #.get() recebe 0 como valor padrão para evitar quebra do código
-    if len(dict_receitas) > 4:
+    if chave != "bobo de camarao" and chave != "tapioca de carne de sol" and chave !="carne de sol com macaxeira" and chave != "camarao na moranga":
         dict_precos[chave] = (custo_total + 5) # Adicionando os 5 reais q a questão ordena
     else:
         dict_precos[chave] = custo_total
 
-num_pedidos = 0
-for qtd_pedidos in dict_pedidos.values():
-    num_pedidos += qtd_pedidos
+num_pedidos =  sum(dict_pedidos.values())
 
 while num_pedidos > 0:
     dispensa = verificao_de_estoque(dict_ingredientes, dict_receitas, dict_estoque, dict_pedidos, caixa)  
     prato = preparacao_do_pedido(dict_estoque, dict_pedidos, dict_receitas)
-    lucro = financas(dict_pedidos, dict_precos, caixa)
+    if num_pedidos == 1:
+        lucro = financas(dict_pedidos, dict_precos, caixa) # Restaurante em alavancagem
 
     num_pedidos -= 1
 
