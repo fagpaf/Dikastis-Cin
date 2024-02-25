@@ -19,8 +19,8 @@ def reposicao_do_estoque(dict_ingredientes, dict_receitas, dict_estoque, dict_pe
     ingrediente_reposicao = dict_estoque
     caixa -= 4 * dict_ingredientes[ingrediente_reposicao]
     
-    # Adiciona 3 unidades a todos os ingredientes que precisam ser repostos
-    dict_estoque[ingrediente_reposicao] += 3
+    # Adiciona 4 unidades a todos os ingredientes que precisam ser repostos
+    dict_estoque[ingrediente_reposicao] += 4
     
     return result
 
