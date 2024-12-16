@@ -1,0 +1,62 @@
+Case 1:
+4
+Todo
+85
+Itadori
+90
+Nanami
+80
+Inumaki
+85
+
+Case 2:
+6
+Fushiguro
+80
+Itadori
+99
+Kugisaki
+70
+Mahito
+90
+Yuta
+90
+Gojo
+95
+
+Case 3:
+4
+Itadori
+90
+Hanami
+90
+Jogo
+90
+Getu
+90
+
+Case 4:
+5
+Maki
+75
+Mai
+78
+Panda
+79
+Mei Mei
+83
+Itadori
+96
+
+Case 5: ele avança até a final e erde pra gojo
+5
+Getu
+93
+Gojo
+95
+Tsukumo
+92
+Yuta
+94
+Itadori
+85
