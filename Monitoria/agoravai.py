@@ -1,4 +1,3 @@
-print(f"Digite o número de feiticeiros participantes: ")
 num_feiticeiros = int(input())
 feiticeiros = []
 
@@ -30,7 +29,7 @@ while len(feiticeiros) > 1:
     rodada += 1
 
 campeao = feiticeiros[0]
-print(f"\nO campeão do torneio é {campeao[0]} com nível de poder {campeao[1]}!")
+print(f"\nO campeão do torneio é {campeao[0]} com nível de energia amaldiçoada {campeao[1]}!")
 
 if campeao[0] == "Itadori":
     if campeao[1] > 90:
