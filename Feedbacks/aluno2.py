@@ -1,5 +1,3 @@
-# Q8
-
 num_gojo = input()
 num_gojo = num_gojo.split("-")
 for x in num_gojo:

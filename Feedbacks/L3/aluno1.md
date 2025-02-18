@@ -19,18 +19,11 @@ O uso excessivo de break pode ser considerado como um método **Go Horse**.
 
 ---
 
-## 3. Qualidade das soluções
-Suas **soluções foram muito boas**, sem ajustes graves a serem feitos. Parabéns!
+## 3. 
 
 ---
 
-## 4. Mistura de idiomas no código
-Gostaria de pontuar sobre a questão **8**, onde você utilizou uma variável com o nome `"score"`.  
-Neste caso específico, não houve impacto a curto prazo pela mistura de inglês e português. No entanto, caso você utilizasse a variável `"score"` em outra operação e tivesse mais variáveis em inglês, seu código poderia ficar **inconsistente** e com **déficit de legibilidade**.
-
-![Var](https://raw.githubusercontent.com/fagpaf/Images/refs/heads/main/L1/Captura%20de%20tela%202024-12-15%20204609.png)
-
-Em contextos colaborativos, é essencial adotar um padrão consistente, escolhendo apenas **um idioma** para nomear variáveis. Isso será especialmente relevante no projeto final da cadeira.
+## 4. 
 
 ---
 
@@ -74,18 +67,8 @@ Q5:
 Na **linha 12** você utilizou ``continue``, mais uma vez e você tivesse feito um ``else``, seria o suficiente
 ![Código Corrigido]()
 
-
-Q6:
-Na **Linha 8** poderia ter feito assim:
-``feiticeiros_principal.append([nome_feiticeiro, nivel_energia])``
-
-
-
-
-
 Q7:
-2 imagens para ser comentadas, >= e f.append
-![Código Corrigido]()
+Aqui você poderia ter usado um ``for posicao in range(3): `` na **linha 11** com um ``while var`` sendo **var** um booleano como condicional de parada, isso evitaria que você repetisse o seu código **n vezes**.
 ![Código Corrigido]()
 
 Q8:

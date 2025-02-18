@@ -1,6 +1,5 @@
 # Q7
 
-
 animes_favoritos = ['Fullmetal Alchemist: Brotherhood', 'Attack On Titan', 'Death Note', 'Naruto', 'One Piece', 'Demon Slayer', 'Dragon Ball Z', 'Jujutsu Kaisen', 'Pokemon', 'Bleach']
 pontos = [0,0,0,0,0,0,0,0,0,0]
 quantidade_amigos = int(input())
