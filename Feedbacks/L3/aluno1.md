@@ -59,17 +59,7 @@ Q5:
 Na **linha 12** você utilizou ``continue``, mais uma vez e você tivesse feito um ``else``, seria o suficiente
 ![Código Corrigido]()
 
-
-Q6:
-Na **Linha 8** poderia ter feito assim:
-``feiticeiros_principal.append([nome_feiticeiro, nivel_energia])``
-
-
-
-
-
 Q7:
-2 imagens para ser comentadas, >= e f.append
 Aqui você poderia ter usado um ``for posicao in range(3): `` na **linha 11** com um ``while var`` sendo **var** um booleano como condicional de parada, isso evitaria que você repetisse o seu código **n vezes**.
 ![Código Corrigido]()
 
