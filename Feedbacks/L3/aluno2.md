@@ -11,7 +11,7 @@ Vamos ao **Feedback da Lista 3**.
 ## 1. Comentários no código
 Queria começar falando novamente sobre o uso de **comentários no código**. Chamando a atenção novamente, porque nas partes importantes do código onde você está **impondo sua lógica** é importante fazer isso. Caso isso se repita principalmente nessas últimas listas ***considerarei reduzir as notas***, pois será complicado avaliar as questões nas próximas listas.
 Por exemplo na Q3, o for aninhado é complicado de identificar cada um sem ter comentários, já falando dessa questão um tópico interessante para você pesquisar é **Never Naste**
-[Vídeo no You Tube sobre.](https://www.youtube.com/watch?v=CFRhGnuXG-4)
+[***Vídeo no You Tube sobre.***](https://www.youtube.com/watch?v=CFRhGnuXG-4)
 
 ---
 
