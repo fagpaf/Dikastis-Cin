@@ -40,4 +40,4 @@ while viloes != 'Já temos nossa lista de vilões':
             lista_viloes.remove(nome_vilao)
 print('O resultado final ficou assim:')
 saida_final = ', '.join(lista_viloes)
-print(saida_final)
+print(saida_final) 

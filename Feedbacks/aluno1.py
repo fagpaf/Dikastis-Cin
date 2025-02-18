@@ -1,37 +1,120 @@
-num_feiticeiros = int(input())
-feiticeiros_principal = []
-rodada = 0
-for nomes in range(0, num_feiticeiros):
-    nome_feiticeiro = input()
-    nivel_energia = int(input())
-    feiticeiros_principal.append([nome_feiticeiro, nivel_energia])
-    
-while len(feiticeiros_principal) > 1:
-    print(f'\n--- Rodada {rodada + 1} ---')
-    perdedores = []
-    for indice in range(0, len(feiticeiros_principal), 2):
-        if indice + 1 < len(feiticeiros_principal):
-            feiticeiro1 = feiticeiros_principal[indice]
-            feiticeiro2 = feiticeiros_principal[indice + 1]
+# Q7
 
-            if feiticeiro1[1] >= feiticeiro2[1]:
-                vencedor = feiticeiro1
-                perdedores.append(feiticeiro2)
+
+animes_favoritos = ['Fullmetal Alchemist: Brotherhood', 'Attack On Titan', 'Death Note', 'Naruto', 'One Piece', 'Demon Slayer', 'Dragon Ball Z', 'Jujutsu Kaisen', 'Pokemon', 'Bleach']
+pontos = [0,0,0,0,0,0,0,0,0,0]
+quantidade_amigos = int(input())
+print(f'{quantidade_amigos} amigos participaram da votação!')
+
+for amigos in range(0, quantidade_amigos):
+    nome = input()
+    print(f'{nome} é a {amigos + 1}ª pessoa à votar!')
+    primeiro = input().title()
+    if primeiro in animes_favoritos:
+        print(f'{nome} colocou {primeiro} em 1º lugar do seu ranking!')
+        indice = animes_favoritos.index(primeiro)
+        pontos[indice] += 3
+    else:
+        while primeiro not in animes_favoritos:
+            print(f'O anime {primeiro} não está presente na votação!')
+            primeiro = input().title()
+
+        print(f'{nome} colocou {primeiro} em 1º lugar do seu ranking!')
+        indice = animes_favoritos.index(primeiro)
+        pontos[indice] += 3
+
+    segundo = input().title()
+    if segundo in animes_favoritos:
+        if segundo == primeiro:
+            while segundo == primeiro:
+                print(f'{nome}, você já votou neste anime! Escolha um outro anime para ocupar a sua 2º posição!')
+                segundo = input().title()
             else:
-                vencedor = feiticeiro2
-                perdedores.append(feiticeiro1)
-            print(f'Confronto: {feiticeiro1[0]} vs {feiticeiro2[0]}')
-            print(f'{vencedor[0]} vence!')
+                print(f'{nome} colocou {segundo} em 2º lugar do seu ranking!')
+                indice = animes_favoritos.index(segundo)
+                pontos[indice] += 2
         else:
-            feiticeiro_sobrando = feiticeiros_principal[indice]
-            print(f'{feiticeiro_sobrando[0]} avança automaticamente!')
-    for perdedor in perdedores:
-        feiticeiros_principal.remove(perdedor)
-    rodada += 1
-print(f'\nO campeão do torneio é {feiticeiros_principal[0][0]} com nível de energia amaldiçoada {feiticeiros_principal[0][1]}!')
-if feiticeiros_principal [0][0] == 'Itadori' and feiticeiros_principal [0][1] > 90:
-    print('\n### Nas sombras da alma de Itadori, Sukuna desperta e toma o controle! ###')
-    print('Uma aura de destruição toma conta, não há escapatória.')
-    print('Com um riso diabólico, ele manifesta sua Expansão de Domínio: Fukuma Mizushi!')
-elif feiticeiros_principal [0][0] == 'Itadori' and feiticeiros_principal [0][1] <= 90:
-    print('\nItadori vence com honra e bravura!')
+            print(f'{nome} colocou {segundo} em 2º lugar do seu ranking!')
+            indice = animes_favoritos.index(segundo)
+            pontos[indice] += 2
+    else:
+        while segundo not in animes_favoritos:
+            print(f'O anime {segundo} não está presente na votação!')
+            segundo = input().title()
+        else:
+            if segundo == primeiro:
+                while segundo == primeiro:
+                    print(f'{nome}, você já votou neste anime! Escolha um outro anime para ocupar a sua 2º posição!')
+                    segundo = input().title()
+                else:
+                    print(f'{nome} colocou {segundo} em 2º lugar do seu ranking!')
+                    indice = animes_favoritos.index(segundo)
+                    pontos[indice] += 2
+            else:
+                print(f'{nome} colocou {segundo} em 2º lugar do seu ranking!')
+                indice = animes_favoritos.index(segundo)
+                pontos[indice] += 2
+
+    terceiro = input().title()
+    if terceiro in animes_favoritos:
+        if terceiro == primeiro:
+            while terceiro == primeiro:
+                print(f'{nome}, você já votou neste anime! Escolha um outro anime para ocupar a sua 3º posição!')
+                terceiro = input().title()
+            else:
+                print(f'{nome} colocou {terceiro} em 3º lugar do seu ranking!')
+                indice = animes_favoritos.index(terceiro)
+                pontos[indice] += 1
+        elif terceiro == segundo:
+            while terceiro == segundo:
+                print(f'{nome}, você já votou neste anime! Escolha um outro anime para ocupar a sua 3º posição!')
+                terceiro = input().title()
+            else:
+                print(f'{nome} colocou {terceiro} em 3º lugar do seu ranking!')
+                indice = animes_favoritos.index(terceiro)
+                pontos[indice] += 1
+        else:
+            print(f'{nome} colocou {terceiro} em 3º lugar do seu ranking!')
+            indice = animes_favoritos.index(terceiro)
+            pontos[indice] += 1
+    else:
+        while terceiro not in animes_favoritos:
+            print(f'O anime {terceiro} não está presente na votação!')
+            terceiro = input().title()
+        else:
+            if terceiro == primeiro:
+                while terceiro == primeiro:
+                    print(f'{nome}, você já votou neste anime! Escolha um outro anime para ocupar a sua 3º posição!')
+                    terceiro = input().title()
+                else:
+                    if terceiro == segundo:
+                        while terceiro == segundo:
+                            print(f'{nome}, você já votou neste anime! Escolha um outro anime para ocupar a sua 3º posição!')
+                            terceiro = input().title()
+                        else:
+                            print(f'{nome} colocou {terceiro} em 3º lugar do seu ranking!')
+                            indice = animes_favoritos.index(terceiro)
+                            pontos[indice] += 1
+            elif terceiro == segundo:
+                while terceiro == primeiro:
+                    print(f'{nome}, você já votou neste anime! Escolha um outro anime para ocupar a sua 3º posição!')
+                    terceiro = input().title()
+                else:
+                    if terceiro == segundo:
+                        while terceiro == segundo:
+                            print(f'{nome}, você já votou neste anime! Escolha um outro anime para ocupar a sua 3º posição!')
+                            terceiro = input().title()
+                        else:
+                            print(f'{nome} colocou {terceiro} em 3º lugar do seu ranking!')
+                            indice = animes_favoritos.index(terceiro)
+                            pontos[indice] += 1
+            else:
+                print(f'{nome} colocou {terceiro} em 3º lugar do seu ranking!')
+                indice = animes_favoritos.index(terceiro)
+                pontos[indice] += 1
+
+indice_final = pontos.index(max(pontos))
+print(f'Com {max(pontos)} pontos, {animes_favoritos[indice_final]} foi votado como o melhor anime!')
+if animes_favoritos[indice_final] == 'Pokemon':
+    print('César - Pokémon é o melhor anime da história!!!')
+print('Eita mandaram dúvida no discord, vou lá responder!')

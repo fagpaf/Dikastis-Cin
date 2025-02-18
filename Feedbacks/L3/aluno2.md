@@ -1,19 +1,17 @@
 Rafael Victor
 
-# Feedback da Lista 1 - Comandos Condicionais
+# Feedback da Lista 3 - Listas
 
-Olá, Rafael! Tudo certo?!
-Sou **Flávio** e, durante esse período, vou ficar responsável por te mandar feedbacks das tuas listas. Esses feedbacks têm o intuito de te fazer melhorar ainda mais. A gente pode dar dicas de boas práticas, outras possíveis soluções e coisas do gênero.
-
-Antes de começar, queria te **parabenizar** por ter conseguido fazer todas as questões! O importante é sempre tentar resolver todas, porque é isso que traz familiaridade com a linguagem.
-
-Sem mais delongas, vamos ao **Feedback da Lista 1**.
+Olá, Rafael! Tudo certo?  
+Aqui é **Flávio**, **parabéns** por ter conseguido fazer todas as questões!
+Vamos ao **Feedback da Lista 3**.
 
 ---
 
 ## 1. Comentários no código
-Queria começar falando sobre o uso de **comentários no código**.
-Por questão de boa prática e **manutenção de código**, a utilização de comentários é fundamental. Hoje você sabe tudo o que está acontecendo no programa, mas daqui a 2 meses será que você vai se lembrar? Outra vantagem é que, na hora de tirar uma dúvida, a pessoa que for te ajudar terá muito mais facilidade em entender o que você escreveu.
+Queria começar falando novamente sobre o uso de **comentários no código**. Chamando a atenção novamente, porque nas partes importantes do código onde você está **impondo sua lógica** é importante fazer isso. Caso isso se repita principalmente nessas últimas listas ***considerarei reduzir as notas***, pois será complicado avaliar as questões nas próximas listas.
+Por exemplo na Q3, o for aninhado é complicado de identificar cada um sem ter comentários, já falando dessa questão um tópico interessante para você perquisar é **Never Naste**
+[Vídeo no You Tube sobre.](https://www.youtube.com/watch?v=CFRhGnuXG-4)
 
 ---
 
@@ -23,13 +21,9 @@ A falta de variáveis também precisa de ajuste como na questão **5**.
 
 ---
 
-## 3. Mistura de idiomas no código
-Gostaria de pontuar sobre a questão **8**, onde você utilizou uma variável com o nome `"score"`.  
-Neste caso específico, não houve impacto a curto prazo pela mistura de inglês e português. No entanto, caso você utilizasse a variável `"score"` em outra operação e tivesse mais variáveis em inglês, seu código poderia ficar **inconsistente** e com **déficit de legibilidade**.
+## 3. 
 
-![Var](https://raw.githubusercontent.com/fagpaf/Images/refs/heads/main/L1/Captura%20de%20tela%202024-12-15%20204609.png)
 
-Em contextos colaborativos, é essencial adotar um padrão consistente, escolhendo apenas **um idioma** para nomear variáveis. Isso será especialmente relevante no projeto final da cadeira.
 
 
 ## 4. Ótimas resoluções
