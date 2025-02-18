@@ -10,7 +10,7 @@ Vamos ao **Feedback da Lista 3**.
 
 ## 1. Comentários no código
 Queria começar falando novamente sobre o uso de **comentários no código**. Chamando a atenção novamente, porque nas partes importantes do código onde você está **impondo sua lógica** é importante fazer isso. Caso isso se repita principalmente nessas últimas listas ***considerarei reduzir as notas***, pois será complicado avaliar as questões nas próximas listas.
-Por exemplo na Q3, o for aninhado é complicado de identificar cada um sem ter comentários, já falando dessa questão um tópico interessante para você perquisar é **Never Naste**
+Por exemplo na Q3, o for aninhado é complicado de identificar cada um sem ter comentários, já falando dessa questão um tópico interessante para você pesquisar é **Never Naste**
 [Vídeo no You Tube sobre.](https://www.youtube.com/watch?v=CFRhGnuXG-4)
 
 ---
@@ -27,9 +27,7 @@ A falta de variáveis também precisa de ajuste como na questão **5**.
 
 
 ## 4. Ótimas resoluções
-Queria enfatizar aqui o seu domínio com os **Comandos Condicionais**, com resoluções mais avançadas como na primeira questão.
 
-![Código Corrigido](https://raw.githubusercontent.com/fagpaf/Images/refs/heads/main/L1/Captura%20de%20tela%202024-12-16%20125338.png)
 
 ---
 
