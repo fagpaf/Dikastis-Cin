@@ -2,10 +2,6 @@ Pedro
 
 # Feedback da Lista 3 - Listas
 
-Olá, Pedro! Tudo certo?  
-Aqui é **Flávio**, **parabéns** por ter conseguido fazer todas as questões!
-Vamos ao **Feedback da Lista 3**.
-
 ---
 
 ## 1. Comentários no código
@@ -21,17 +17,18 @@ O uso excessivo de break pode ser considerado como um método **Go Horse**.
 
 ## Conclusão
 Bom, eram esses os comentários que eu tinha para fazer.  
-Mais uma vez, **parabéns** por concluir a lista toda!  
 
 Qualquer dúvida que você tiver sobre a lista ou algo que eu expliquei, pode me buscar no Discord. Meu login é **fagpaf**.  
 **Tamo junto!**
 
 Q1 e Q2:
 uso de break
+![Código Corrigido](https://raw.githubusercontent.com/fagpaf/Images/refs/heads/main/2025/L3/Screenshot%202025-02-13%20100452.png)
 
 Q2: Você utilizou **break** na linha 13, porém de maneira desnecessária, pois você poderia apenas identar o código. Quando ``dupla_alunos != 'Acabou!'`` o loop seria encerrado do modo desejado.
 
-![Código Corrigido]()
+![Código Corrigido](https://raw.githubusercontent.com/fagpaf/Images/refs/heads/main/2025/L3/Captura%20de%20tela%202025-02-17%20230935.png)
+
 
 Q3:
 Você fez a questão utilizando as ideias de condicionais, o que não é mais viável, pois você tem uma funcionalidade poderosa disponível agora, as Listas veja como ficaria se você tivesse utilizado.
@@ -43,13 +40,13 @@ Melhorias:
 ``frases = ["O volume da água foi alterado.", "A cor da água foi alterada.", "O gosto da água foi alterado.", "A folha se moveu.", "Impurezas apareceram na água."]``
 
 Fazer isso evitaria as condicionais da **linha 18** e deixaria mais legível seu código.
-![Código Corrigido]()
+![Código Corrigido](https://raw.githubusercontent.com/fagpaf/Images/refs/heads/main/2025/L3/Q3%20do%20aluno%201.png)
 
 3- Uma lista para fazer a remoção monitores:
 ``grupos = [aprimoradores, emissores, transmutadores, manipuladores, conjuradores, especialistas]``
 
 Ao em vez de fazer como na **linha 14**, ficaria assim:
-![Código Corrigido]()
+![Código Corrigido](https://raw.githubusercontent.com/fagpaf/Images/refs/heads/main/2025/L3/Q3%20do%20aluno%201%20obs.png)
 
 Q4:
 Mesmo ponto da Q2, era só colocar a condicional desse modo e identar o resto do código para dentro desse ``if`` que faria a mesma coisa do jeito que você fez:
@@ -57,16 +54,13 @@ Mesmo ponto da Q2, era só colocar a condicional desse modo e identar o resto do
 
 Q5: 
 Na **linha 12** você utilizou ``continue``, mais uma vez e você tivesse feito um ``else``, seria o suficiente
-![Código Corrigido]()
+![Código Corrigido](https://raw.githubusercontent.com/fagpaf/Images/refs/heads/main/2025/L3/Q5%20aluno%201.png)
 
 Q7:
 Aqui você poderia ter usado um ``for posicao in range(3): `` na **linha 11** com um ``while var`` sendo **var** um booleano como condicional de parada, isso evitaria que você repetisse o seu código **n vezes**.
 ![Código Corrigido]()
 
-Q8:
-Utilize **abreviações** para os nomes das variáveis.  
-Por exemplo: `nome_jogador` pode ser reduzido para `nome_jgd1`, e assim por diante, substituindo "jogador" por "jgd".
-![Código Corrigido](https://raw.githubusercontent.com/fagpaf/Images/refs/heads/main/L1/Captura%20de%20tela%202024-12-15%20204556.png)
+
 
 --------------------------------------------------------------------------------------------------------
 
